@@ -1,19 +1,19 @@
-import { PRODUCTS, CARD_BG } from "../data/products";
-import { ICONS } from "./Icons";
+import { PRODUCTS } from "../data/products";
 
 function ProductCard({ p }) {
   return (
     <div className="card">
-      <div className="card-media" style={{ background: CARD_BG[p.icon] || CARD_BG.mixed }}>
+      <div className="card-media">
         <span className={`badge ${p.available ? "available" : "limited"}`}>
           {p.available ? "En stock" : "Sur commande"}
         </span>
-        <svg viewBox="0 0 200 190" dangerouslySetInnerHTML={{ __html: ICONS[p.icon] || ICONS.mixed }} />
+        <img src={p.photo} alt={`${p.name} — vraie photographie`} loading="lazy" />
       </div>
       <div className="card-body">
         <span className="card-cat">{p.category}</span>
         <h3>{p.name}</h3>
         <p className="desc">{p.desc}</p>
+        <p className="photo-credit" style={{ textAlign: "left", margin: "-4px 0 0" }}>{p.credit}</p>
         <div className="card-footer">
           <div className="price">{p.price}<span>MAD</span></div>
           <a href="#contact" className="btn btn-outline btn-sm">Découvrir</a>

@@ -1,5 +1,3 @@
-import { ICONS } from "./Icons";
-
 export default function Hero() {
   return (
     <section className="hero" id="accueil">
@@ -19,14 +17,15 @@ export default function Hero() {
         </div>
         <div className="hero-visual">
           <div className="halo"></div>
-          <svg viewBox="0 0 400 400" fill="none">
-            <g transform="translate(40,10) scale(1.5)" dangerouslySetInnerHTML={{ __html: ICONS["gift-rose"] }} />
-            <g transform="translate(150,60) scale(1.1)" dangerouslySetInnerHTML={{ __html: ICONS.tulip }} />
-            <g transform="translate(30,180) scale(1.2)" dangerouslySetInnerHTML={{ __html: ICONS.sunflower }} />
-            <g transform="translate(190,190) scale(0.9)" dangerouslySetInnerHTML={{ __html: ICONS["rose-red"] }} />
-          </svg>
+          <div className="hero-photo">
+            <img
+              src="https://images.pexels.com/photos/68570/roses-bouquet-congratulations-arrangement-68570.jpeg?auto=compress&cs=tinysrgb&w=900"
+              alt="Bouquet de roses roses pastel, photo réelle"
+            />
+          </div>
         </div>
       </div>
+      <p className="photo-credit" style={{ textAlign: "right", maxWidth: 420, marginLeft: "auto", paddingRight: 28 }}>Photo : Pixabay / Pexels — « Bouquet of Pink Roses »</p>
     </section>
   );
 }

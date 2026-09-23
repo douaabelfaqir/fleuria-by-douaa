@@ -1,14 +1,16 @@
-import { ICONS } from "./Icons";
-
 export default function About() {
   return (
     <section id="apropos" style={{ background: "var(--cream)" }}>
       <div className="container about-wrap">
         <div className="about-visual">
           <div className="ring"></div>
-          <svg viewBox="0 0 300 300" fill="none">
-            <g transform="translate(50,40) scale(1.3)" dangerouslySetInnerHTML={{ __html: ICONS.wedding }} />
-          </svg>
+          <div className="about-photo">
+            <img
+              src="https://images.pexels.com/photos/34989978/pexels-photo-34989978.jpeg?auto=compress&cs=tinysrgb&w=700"
+              alt="Bouquet de fleurs roses et blanches tenu à la main, photo réelle"
+            />
+          </div>
+          <p className="photo-credit">Photo : Zariflavin 🌼 / Pexels — « Elegant Floral Bouquet with Pink and White Flowers »</p>
         </div>
         <div className="about-text">
           <span className="eyebrow">Notre histoire</span>
